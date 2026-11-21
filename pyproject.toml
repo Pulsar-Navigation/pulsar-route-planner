@@ -1,0 +1,56 @@
+[project]
+name = "pulsar-route-planner"
+version = "0.1.0"
+description = "Observation planner for pulsar-based ship navigation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Erin Robinson" }]
+dependencies = [
+    "astropy",
+    "numpy",
+    "plotly",
+    "psrqpy",
+    "scipy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "ruff",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# E/F: basic errors, I: import sorting, B: likely bugs, UP: modern syntax
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "src"
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["astropy.*", "psrqpy.*", "plotly.*", "scipy.*"]
+ignore_missing_imports = true
