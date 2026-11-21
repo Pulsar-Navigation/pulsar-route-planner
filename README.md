@@ -1,4 +1,4 @@
-<img src="./images/logo.sample.png" alt="Logo of the project" align="right">
+<img src="docs/pulsar-star-icon-mark-in-filled-style-vector.jpg" alt="Logo of the project" width="100">
 
 # Pulsar Route Planner
 
