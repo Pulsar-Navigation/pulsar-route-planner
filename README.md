@@ -83,6 +83,7 @@ pulsar-route-planner/
 │   ├── visibility.py
 │   ├── scoring.py
 │   ├── geometry.py
+│   ├── selection.py        # select_four_pulsars, select_best_set 
 │   ├── scheduler.py
 │   ├── io.py               # reading configs, writing JSON/CSV
 │   └── plotting.py
@@ -91,6 +92,7 @@ pulsar-route-planner/
 │   ├── test_visibility.py
 │   ├── test_scoring.py
 │   ├── test_geometry.py
+│   ├── test_selection.py
 │   └── test_scheduler.py
 ├── examples/               # sample voyage configs
 ├── scripts/                # fetch_catalogue.py and other helpers
